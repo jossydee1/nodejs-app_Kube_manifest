@@ -1,12 +1,12 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: meme-app
+  name: node-app
   namespace: argocd
 spec:
   project: default
   source:
-    repoURL: https://github.com/jossydee1/DevOps-Project1_Kube_manifest
+    repoURL: https://github.com/jossydee1/nodejs-app_Kube_manifest
     path: manifest
     targetRevision: main
     directory:
@@ -16,7 +16,7 @@ spec:
     namespace: my-app
   syncPolicy:
     syncOptions:
-    - CreateNamespace=true
+      - CreateNamespace=true
     automated:
       prune: true
       selfHeal: true
