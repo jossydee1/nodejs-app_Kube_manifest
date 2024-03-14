@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: myapp
-          image: jossydee1/meme-app:build-21
+          image: jossydee1/node-app:build-12
           ports:
             - containerPort: 80
